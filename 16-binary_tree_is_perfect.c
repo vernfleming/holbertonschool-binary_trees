@@ -40,7 +40,7 @@ static int is_perfect_recursive(const binary_tree_t *tree,
 		return (0);
 
 	return (is_perfect_recursive(tree->left, depth, level + 1) &&
-	        is_perfect_recursive(tree->right, depth, level + 1));
+		is_perfect_recursive(tree->right, depth, level + 1));
 }
 
 /**
