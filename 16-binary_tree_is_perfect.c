@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * leftmost_leaf_depth - Computes the depth of the leftmost leaf
- * @tree: Pointer to the node to measure depth from
+ * leftmost_leaf_depth - figures out depth of left side
+ * @tree: pointer to marker to measure depth
  *
- * Return: Depth of the node, or 0 if NULL
+ * Return: depth of the node or 0 if fail/null
  */
 static int leftmost_leaf_depth(const binary_tree_t *tree)
 {
@@ -20,14 +20,15 @@ static int leftmost_leaf_depth(const binary_tree_t *tree)
 }
 
 /**
- * is_perfect_recursive - Recursively checks if a tree is perfect
- * @tree: Pointer to the current node
- * @depth: Expected depth of all leaves
- * @level: Current level in the tree
+ * is_perfect_recursive - recursively checks if a tree is perfect
+ * @tree: pointer to the current node
+ * @depth: depth of tree
+ * @level: level of tree
  *
- * Return: 1 if perfect, 0 otherwise
+ * Return: 1 if perfect else 0
  */
-static int is_perfect_recursive(const binary_tree_t *tree, int depth, int level)
+static int is_perfect_recursive(const binary_tree_t *tree,
+				int depth, int level)
 {
 	if (tree == NULL)
 		return (1);
@@ -43,11 +44,12 @@ static int is_perfect_recursive(const binary_tree_t *tree, int depth, int level)
 }
 
 /**
- * binary_tree_is_perfect - Checks if a binary tree is perfect
- * @tree: Pointer to the root node of the tree
+ * binary_tree_is_perfect - checks if a binary tree is perfecto
+ * @tree: pointer to the root node
  *
- * Return: 1 if perfect, 0 otherwise or if tree is NULL
+ * Return: 1 if perfect else 0
  */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int d;
